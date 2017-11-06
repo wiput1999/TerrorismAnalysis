@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
-import pygal
-
+import pygal as pg
 
 # Import dataset from CSV into pandas dataframe
 data = pd.read_csv('GTDdataset.csv', encoding='latin1', low_memory=False)
@@ -15,7 +14,7 @@ for year in result_x:
     result_y.append(success)
 
 # Initialize Line Chart
-chart = pygal.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True, truncate_label=20)
+chart = pg.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True, truncate_label=20)
 # Chart title
 chart.title = 'Overall success rate from 1970 to 2016 except 1993 (in %)'
 # X-Axis Label
@@ -30,5 +29,3 @@ chart.render_to_file('chart.svg')
 # Pandas display setting to show all row of data
 pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_rows', None)
-
-# print(len(result[['eventid', 'country_txt', 'attacktype1_txt', 'weaptype1_txt', 'targtype1_txt']][:]))

@@ -2,3 +2,5 @@
 venv/**
 .idea/**
 GTDdataset.csv
+__pycache__/**
+Charts/*.svg
