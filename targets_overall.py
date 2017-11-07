@@ -7,34 +7,43 @@ import pandas as pd
 import pygal
 
 # Custom modules import
-import weapons_main
+import targets_main
 
 
 def frequency(data):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
-    # Export file name as Weapons_Frequency_Overall
+    # Export file name as Targets_Frequency_Overall
 
-    weapons = {
-        1: "Biological",
-        2: "Chemical",
-        3: "Radiological",
-        4: "Nuclear",
-        5: "Firearms",
-        6: "Explosives",
-        7: "Fake Weapons",
-        8: "Incendiary",
-        9: "Melee",
-        10: "Sabotage Equipment",
-        11: "Other",
-        12: "Overall",
-        13: "Unknown"
+    targets = {
+        1: "Business",
+        2: "Government (General)",
+        3: "Police",
+        4: "Military",
+        5: "Abortion Related",
+        6: "Airports & Aircraft",
+        7: "Government (Diplomatic)",
+        8: "Educational Institution",
+        9: "Food or Water Supply",
+        10: "Journalists & Media",
+        11: "Maritime",
+        12: "NGO",
+        13: "Other",
+        14: "Private Citizen & Property",
+        15: "Religious",
+        16: "Telecommunication",
+        17: "Terrorists/Non-State Militias",
+        18: "Tourists",
+        19: "Transportation",
+        20: "Unknown",
+        21: "Utilities",
+        22: "Violent Political Parties"
     }
-    result_x = [weapons[x] for x in sorted(weapons)]
+    result_x = [targets[x] for x in sorted(targets)]
     result_y = []
 
-    for x in sorted(weapons):
-        freq = len(data[data['weaptype1'] == x])
+    for x in sorted(targets):
+        freq = len(data[data['targtype1'] == x])
         result_y.append(freq)
 
     chart = pygal.Bar(show_minor_x_labels=False, truncate_legend=40,
@@ -43,46 +52,55 @@ def frequency(data):
 
     chart.x_labels = []
 
-    chart.title = 'Overall usage by weapon categories from 1970 to 2016 except 1993'
+    chart.title = 'Overall incidents by target categories from 1970 to 2016 except 1993'
 
-    for x in range(13):
+    for x in range(22):
         chart.add(result_x[x] + " (" + str(result_y[x]) + ")", result_y[x])
 
-    chart.render_to_file('Weapons_Frequency_Overall.svg')
+    chart.render_to_file('Charts/Targets_Frequency_Overall.svg')
 
     # End of modules and return back to main
-    print("\nGraph generated!\n")
-    weapons_main.main(data)
+    print("\nGraph generated!")
+    targets_main.main(data)
 
 
 def success(data):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
-    # Export file name as Weapons_Frequency_SuccessRate
+    # Export file name as Targets_Frequency_SuccessRate
 
-    weapons = {
-        1: "Biological",
-        2: "Chemical",
-        3: "Radiological",
-        4: "Nuclear",
-        5: "Firearms",
-        6: "Explosives",
-        7: "Fake Weapons",
-        8: "Incendiary",
-        9: "Melee",
-        10: "Sabotage Equipment",
-        11: "Other",
-        12: "Overall",
-        13: "Unknown"
+    targets = {
+        1: "Business",
+        2: "Government (General)",
+        3: "Police",
+        4: "Military",
+        5: "Abortion Related",
+        6: "Airports & Aircraft",
+        7: "Government (Diplomatic)",
+        8: "Educational Institution",
+        9: "Food or Water Supply",
+        10: "Journalists & Media",
+        11: "Maritime",
+        12: "NGO",
+        13: "Other",
+        14: "Private Citizen & Property",
+        15: "Religious",
+        16: "Telecommunication",
+        17: "Terrorists/Non-State Militias",
+        18: "Tourists",
+        19: "Transportation",
+        20: "Unknown",
+        21: "Utilities",
+        22: "Violent Political Parties"
     }
-    result_x = [weapons[x] for x in sorted(weapons)]
+    result_x = [targets[x] for x in sorted(targets)]
     result_y = []
 
-    for x in sorted(weapons):
-        if len(data[data['weaptype1'] == x]) == 0:
+    for x in sorted(targets):
+        if len(data[data['targtype1'] == x]) == 0:
             freq = 0
         else:
-            freq = len(data[(data['weaptype1'] == x) & (data['success'] == 1)]) / len(data[data['weaptype1'] == x])
+            freq = len(data[(data['targtype1'] == x) & (data['success'] == 1)]) / len(data[data['targtype1'] == x])
         result_y.append(freq)
 
     chart = pygal.Bar(show_minor_x_labels=False, truncate_legend=40,
@@ -91,15 +109,15 @@ def success(data):
 
     chart.x_labels = []
 
-    chart.title = 'Overall success rate by weapon categories from 1970 to 2016 except 1993'
+    chart.title = 'Overall success rate by targets from 1970 to 2016 except 1993'
 
-    for x in range(13):
+    for x in range(22):
         if result_y[x] == 0:
             continue
         chart.add(result_x[x] + " (" + str("%.3f" % (result_y[x] * 100)) + "%)", round(result_y[x] * 100, 3))
 
-    chart.render_to_file('Charts/Weapons_Frequency_SuccessRate.svg')
+    chart.render_to_file('Charts/Targets_Frequency_SuccessRate.svg')
 
     # End of modules and return back to main
-    print("\nGraph generated!\n")
-    weapons_main.main(data)
+    print("\nGraph generated!")
+    targets_main.main(data)

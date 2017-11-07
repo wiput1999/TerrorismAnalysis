@@ -10,6 +10,7 @@ import pygal
 import main as parent
 import targets_frequency as frequency
 import targets_success as success
+import targets_overall as overall
 
 
 def main(data):
@@ -31,9 +32,13 @@ def main(data):
 
     if choice == 1:
         target = get_target()
+        if target == 0:
+            overall.frequency(data)
         frequency.main(data, target)
     elif choice == 2:
         target = get_target()
+        if target == 0:
+            overall.success(data)
         success.main(data, target)
     else:
         print("\n***** Invalid choice! ******\n")
@@ -57,7 +62,7 @@ def get_target():
     print("11) Maritime (Include Ports and Maritime Facilities)")
     print("12) NGO")
     print("13) Other")
-    print("14) Private Citizen & Propery")
+    print("14) Private Citizen & Property")
     print("15) Religious Figure/Institutions")
     print("16) Telecommunication")
     print("17) Terrorists/Non-State Militias")
@@ -66,11 +71,11 @@ def get_target():
     print("20) Unknown")
     print("21) Utilities")
     print("22) Violent Political Parties")
-    region = int(input("Type number of target which you want : "))
+    target = int(input("Type number of target which you want : "))
 
-    if region not in [x for x in range(0, 13)]:
+    if target not in [x for x in range(0, 13)]:
         print("Invalid target ID!")
         get_target()
 
-    return region
+    return target
 

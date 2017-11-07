@@ -51,7 +51,7 @@ def frequency(data):
     chart.render_to_file('Charts/Regions_Frequency_Overall.svg')
 
     # End of modules and return back to main
-    print("\nGraph generated!\n")
+    print("\nGraph generated!")
     regions_main.main(data)
 
 
@@ -100,5 +100,5 @@ def success(data):
     chart.render_to_file('Charts/Regions_SuccessRate_Overall.svg')
 
     # End of modules and return back to main
-    print("\nGraph generated!\n")
+    print("\nGraph generated!")
     regions_main.main(data)
