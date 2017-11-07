@@ -27,19 +27,16 @@ def main(data, country):
     # Initialize Line Chart
     chart = pg.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True, truncate_label=20)
     # Chart title
-    chart.title = 'Terriorism success rate of overall countries from 1970 to 2016 except 1993 (in %)'
+    chart.title = 'Terriorism incidents of ' + country + ' from 1970 to 2016 except 1993'
     # X-Axis Label
     chart.x_labels = [str(x) for x in result_x]
     # Y-Axis and label
-    chart.add('Success rate (%)', result_y)
-    # Range of Y-Axis value
-    chart.range = [0, 100]
-    # Save chart into file
-    chart.render_to_file('chart.svg')
+    chart.add('Incidents count', result_y)
 
-    # Pandas display setting to show all row of data
-    pd.set_option('display.expand_frame_repr', False)
-    pd.set_option('display.max_rows', None)
+    # Save chart into file
+    filename = 'Charts/Countries_Frequency_' + str(country) + '.svg'
+    chart.render_to_file(filename)
+
     # End of modules and return back to main
-    print("\nGraph generated!\n")
+    print("\nGraph generated!")
     countries_main.main(data)
