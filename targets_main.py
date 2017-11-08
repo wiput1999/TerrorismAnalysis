@@ -18,6 +18,7 @@ def main(data):
     print("\n*****  Targets chart categories  *****")
     print("1) Frequency")
     print("2) Success Rate")
+    print("3) Compare highest victims by target")
     print("""Type "BACK" return to main menu""")
     print("""Type "EXIT" to terminate program""")
 
@@ -40,6 +41,8 @@ def main(data):
         if target == 0:
             overall.success(data)
         success.main(data, target)
+    elif choice == 3:
+        overall.victims(data)
     else:
         print("\n***** Invalid choice! ******\n")
         main(data)
