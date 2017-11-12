@@ -13,7 +13,6 @@ import weapons_success as success
 import weapons_overall as overall
 
 
-
 def main(data):
     """ Main function with data """
     print("*****  Weapons chart categories  *****")
@@ -27,7 +26,7 @@ def main(data):
     if choice.lower() == "exit":
         parent.do_exit()
     if choice.lower() == "back":
-        parent.menu_main()
+        parent.menu_main(data)
 
     choice = int(choice)
 

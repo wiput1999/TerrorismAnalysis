@@ -14,13 +14,18 @@ import weapons_main as weapons
 import targets_main as targets
 
 
-def main():
+def main(1):
     """ Main function use for entrypoint """
+    # Initialize data variable as global variable name "data"
+    print("Program initializing...")
+    data = pd.read_csv('GTDdataset.csv', encoding='latin1', low_memory=False)
+    print("Program Initialized...\n\n")
+
     print("Terrorism Analysis Data Visualization\n")
-    menu_main()
+    menu_main(data)
 
 
-def menu_main():
+def menu_main(data):
     """ Main menu function """
     print("\n*****  Main menu  *****")
     print("Which type of graph do you want to generate?")
@@ -38,46 +43,46 @@ def menu_main():
     choice = int(choice)
 
     if choice == 1:
-        menu_weapons()
+        menu_weapons(data)
 
     elif choice == 2:
-        menu_targets()
+        menu_targets(data)
 
     elif choice == 3:
-        menu_countries()
+        menu_countries(data)
 
     elif choice == 4:
-        menu_regions()
+        menu_regions(data)
 
     elif choice == 5:
-        menu_heatmaps()
+        menu_heatmaps(data)
 
     else:
         print("\n***** Invalid choice! ******\n")
-        menu_main()
+        menu_main(data)
 
 
-def menu_weapons():
+def menu_weapons(data):
     """ Main menu of weapons """
     weapons.main(data)
 
 
-def menu_targets():
+def menu_targets(data):
     """ Main menu of targets """
     targets.main(data)
 
 
-def menu_countries():
+def menu_countries(data):
     """ Main menu of countries """
     countries.main(data)
 
 
-def menu_regions():
+def menu_regions(data):
     """ Main menu of regions """
     regions.main(data)
 
 
-def menu_heatmaps():
+def menu_heatmaps(data):
     """ Main menu of heatmaps """
     heatmaps.main(data)
 
@@ -95,8 +100,4 @@ def do_exit():
 
 # If call file directly
 if __name__ == '__main__':
-    # Initialize data variable as global variable name "data"
-    print("Program initializing...")
-    data = pd.read_csv('GTDdataset.csv', encoding='latin1', low_memory=False)
-    print("Program Initialized...\n\n")
     main()

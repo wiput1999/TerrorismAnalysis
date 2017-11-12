@@ -24,7 +24,7 @@ def main(data):
     if choice.lower() == "exit":
         parent.do_exit()
     if choice.lower() == "back":
-        parent.menu_main()
+        parent.menu_main(data)
 
     choice = int(choice)
 
