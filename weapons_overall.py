@@ -3,14 +3,13 @@ Weapons frequency all year graph generator module
 """
 
 # Third-party libraries import
-import pandas as pd
 import pygal
 
 # Custom modules import
 import weapons_main
 
 
-def frequency(data):
+def frequency(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Weapons_Frequency_Overall
@@ -48,14 +47,16 @@ def frequency(data):
     for x in range(13):
         chart.add(result_x[x] + " (" + str(result_y[x]) + ")", result_y[x])
 
-    chart.render_to_file('Weapons_Frequency_Overall.svg')
+    chart.render_to_file('Charts/Weapons_Frequency_Overall.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!\n")
     weapons_main.main(data)
 
 
-def success(data):
+def success(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Weapons_Frequency_SuccessRate
@@ -101,5 +102,7 @@ def success(data):
     chart.render_to_file('Charts/Weapons_SuccessRate_Overall.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!\n")
     weapons_main.main(data)

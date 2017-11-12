@@ -3,14 +3,13 @@ Regions frequency all year graph generator module
 """
 
 # Third-party libraries import
-import pandas as pd
 import pygal
 
 # Custom modules import
 import regions_main
 
 
-def frequency(data):
+def frequency(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Weapons_Frequency_Overall
@@ -51,11 +50,13 @@ def frequency(data):
     chart.render_to_file('Charts/Regions_Frequency_Overall.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     regions_main.main(data)
 
 
-def success(data):
+def success(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Weapons_SuccessRate_Overall
@@ -100,5 +101,7 @@ def success(data):
     chart.render_to_file('Charts/Regions_SuccessRate_Overall.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     regions_main.main(data)
