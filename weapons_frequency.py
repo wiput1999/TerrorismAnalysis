@@ -7,7 +7,6 @@ Weapons frequency all year graph generator module
 import pandas as pd
 import pygal
 
-
 # Custom modules import
 import weapons_main
 
@@ -31,6 +30,7 @@ def main(data, weapon):
         12: "Overall",
         13: "Unknown"
     }
+    
     result_x = [x for x in range(1970, 2017) if x != 1993]
     result_y = []
 
@@ -40,17 +40,19 @@ def main(data, weapon):
 
     # Initialize Line Chart
     chart = pg.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True, truncate_label=20)
+
     # Chart title
     chart.title = 'Terriorism incidents of ' + weapons[weapon] + ' from 1970 to 2016 except 1993'
+
     # X-Axis Label
     chart.x_labels = [str(x) for x in result_x]
+
     # Y-Axis and label
     chart.add('Incidents count', result_y)
-
+    
     # Save chart into file
     filename = 'Charts/Weapons_Frequency_' + weapons[weapon] + '.svg'
     chart.render_to_file(filename)
-
 
     # End of modules and return back to main
     print("\nGraph generated!\n")
