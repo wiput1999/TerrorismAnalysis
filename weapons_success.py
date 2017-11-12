@@ -3,14 +3,13 @@ Weapons success rate all year graph generator module
 """
 
 # Third-party libraries import
-import pandas as pd
 import pygal as pg
 
 # Custom modules import
 import weapons_main
 
 
-def main(data, weapon):
+def main(data, weapon, test=False):
     """ Main generate function get data and weapon id """
     # Graph generate goes here!
     # Export file name as Weapon_Success_<weapon_id>
@@ -33,13 +32,20 @@ def main(data, weapon):
     result_y = []
 
     for year in result_x:
+
+        if len(data[(data['iyear'] == year) & (data['weaptype1'] == weapon)]) == 0:
+            if test:
+                return
+            print("\nGraph can't generated!")
+            weapons_main.main(data)
+
         success = (len(data[(data['success'] == 1) & (data['weaptype1'] == weapon) & (data['iyear'] == year)]) / len(
             data[(data['iyear'] == year) & (data['weaptype1'] == weapon)])) * 100
         result_y.append(success)
 
     # Initialize Line Chart
     chart = pg.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True,
-                    truncate_label=20, value_formatter=lambda x: "%d%%" % (x))
+                    truncate_label=20, value_formatter=lambda x: "%d%%" % x)
     # Chart title
     chart.title = str(weapons[weapon]) + ' weapon success rate from 1970 to 2016 except 1993 (in %)'
     # X-Axis Label
@@ -52,6 +58,7 @@ def main(data, weapon):
     filename = 'Charts/Weapons_SuccessRate_' + weapons[weapon] + '.svg'
     chart.render_to_file(filename)
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
-
     weapons_main.main(data)

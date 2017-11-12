@@ -4,7 +4,6 @@ Region success rate all year graph generator module
 
 
 # Third-party libraries import
-import pandas as pd
 import pygal as pg
 
 
@@ -12,7 +11,7 @@ import pygal as pg
 import regions_main
 
 
-def main(data, region):
+def main(data, region, test=False):
     """ Main generate function get data and region id """
     # Graph generate goes here!
     # Export file name as Region_Success_<region_id>
@@ -36,13 +35,20 @@ def main(data, region):
     result_y = []
 
     for year in result_x:
+        # Prevent divided by zero
+        if len(data[(data['iyear'] == year) & (data['region'] == region)]) == 0:
+            if test:
+                return
+            print("\nGraph can't generated!")
+            regions_main.main(data)
+
         success = (len(data[(data['success'] == 1) & (data['region'] == region) & (data['iyear'] == year)]) / len(
             data[(data['iyear'] == year) & (data['region'] == region)])) * 100
         result_y.append(success)
 
     # Initialize Line Chart
     chart = pg.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True,
-                    truncate_label=20, value_formatter=lambda x: "%d%%" % (x))
+                    truncate_label=20, value_formatter=lambda x: "%d%%" % x)
     # Chart title
     chart.title = 'Incidents success rate in ' + regions[region] + ' from 1970 to 2016 except 1993 (in %)'
     # X-Axis Label
@@ -56,5 +62,7 @@ def main(data, region):
     chart.render_to_file(filename)
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     regions_main.main(data)

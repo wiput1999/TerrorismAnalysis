@@ -3,9 +3,6 @@ Countries modules
 """
 
 # Third-party libraries import
-import pandas as pd
-import pygal
-
 # Custom modules import
 import main as parent
 import countries_frequency as frequency

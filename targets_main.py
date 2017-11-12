@@ -3,8 +3,6 @@ Targets modules
 """
 
 # Third-party libraries import
-import pandas as pd
-import pygal
 
 # Custom modules import
 import main as parent
@@ -76,7 +74,7 @@ def get_target():
     print("22) Violent Political Parties")
     target = int(input("Type number of target which you want : "))
 
-    if target not in [x for x in range(0, 13)]:
+    if target not in [x for x in range(0, 23)]:
         print("Invalid target ID!")
         get_target()
 

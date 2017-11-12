@@ -14,7 +14,7 @@ import weapons_main as weapons
 import targets_main as targets
 
 
-def main(1):
+def main():
     """ Main function use for entrypoint """
     # Initialize data variable as global variable name "data"
     print("Program initializing...")

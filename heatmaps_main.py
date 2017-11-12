@@ -4,7 +4,6 @@ Heat maps modules
 
 # Third-party libraries import
 import pandas as pd
-import pygal
 import plotly as ply
 import webbrowser
 

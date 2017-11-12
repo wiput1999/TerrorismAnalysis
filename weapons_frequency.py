@@ -3,14 +3,13 @@ Weapons frequency all year graph generator module
 """
 
 # Third-party libraries import
-import pandas as pd
 import pygal as pg
 
 # Custom modules import
 import weapons_main
 
 
-def main(data, weapon):
+def main(data, weapon, test=False):
     """ Main generate function get data and weapon id """
     # Graph generate goes here!
     # Export file name as Weapons_Frequency_<weapon_id>
@@ -56,5 +55,7 @@ def main(data, weapon):
     chart.render_to_file(filename)
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     weapons_main.main(data)
