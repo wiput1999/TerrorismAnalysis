@@ -3,15 +3,12 @@ Weapons modules
 """
 
 # Third-party libraries import
-import pandas as pd
-import pygal
 
 # Custom modules import
 import main as parent
 import weapons_frequency as frequency
 import weapons_success as success
 import weapons_overall as overall
-
 
 
 def main(data):
@@ -27,7 +24,7 @@ def main(data):
     if choice.lower() == "exit":
         parent.do_exit()
     if choice.lower() == "back":
-        parent.menu_main()
+        parent.menu_main(data)
 
     choice = int(choice)
 
@@ -65,7 +62,7 @@ def get_weapon():
     print("13) Unknown")
     weapon = int(input("Type number of weapon which you want : "))
 
-    if weapon not in [x for x in range(0, 13)]:
+    if weapon not in [x for x in range(0, 14)]:
         print("Invalid weapon ID!")
         get_weapon()
 

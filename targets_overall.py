@@ -3,7 +3,6 @@ Weapons frequency all year graph generator module
 """
 
 # Third-party libraries import
-import pandas as pd
 import pygal
 from math import isnan
 
@@ -11,7 +10,7 @@ from math import isnan
 import targets_main
 
 
-def frequency(data):
+def frequency(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Targets_Frequency_Overall
@@ -61,11 +60,13 @@ def frequency(data):
     chart.render_to_file('Charts/Targets_Frequency_Overall.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     targets_main.main(data)
 
 
-def success(data):
+def success(data, test=False):
     """ Main generate function get data and weapon id = 0 (Overall) """
     # Graph generate goes here!
     # Export file name as Targets_Frequency_SuccessRate
@@ -106,7 +107,7 @@ def success(data):
 
     chart = pygal.Bar(show_minor_x_labels=False, truncate_legend=40,
                       truncate_label=20, x_label_rotation=90, y_labels_major_every=3,
-                      show_minor_y_labels=False)
+                      show_minor_y_labels=False, value_formatter=lambda x: "%d%%" % x)
 
     chart.x_labels = []
 
@@ -120,11 +121,13 @@ def success(data):
     chart.render_to_file('Charts/Targets_Frequency_SuccessRate.svg')
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     targets_main.main(data)
 
 
-def victims(data):
+def victims(data, test=False):
     """ Horizontal Bar chart show highest Victim in categories """
 
     targets = {
@@ -181,5 +184,7 @@ def victims(data):
     chart.render_to_file(filename)
 
     # End of modules and return back to main
+    if test:
+        return
     print("\nGraph generated!")
     targets_main.main(data)
