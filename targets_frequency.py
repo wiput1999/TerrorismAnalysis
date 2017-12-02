@@ -60,7 +60,7 @@ def main(data, target, test=False):
     chart.x_labels = [str(x) for x in years]
 
     # Add data
-    chart.add('Frequency (%)', freq)
+    chart.add('Frequency (Times)', freq)
 
     # Export file name as Targets_Frequency_<target_id>
     chart.render_to_file('Charts/Targets_Frequency_%s.svg' % targets[target])
