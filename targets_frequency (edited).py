@@ -27,7 +27,7 @@ def main(data, target):
         per_cent.append(frequency)
     # Graph generate goes here!
     chart = pygal.Line(x_labels_major_count=8, show_minor_x_labels=False, truncate_legend=40, legend_at_bottom=True, truncate_label=20)
-    chart.title = 'Frequency of %s from 1970 to 2016 (Except 1993) (in per cent)' %(targets[target])
+    chart.title = 'Frequency of %s from 1970 to 2016 (Except 1993)' %(targets[target])
     chart.x_labels = [str(x) for x in years]
     chart.add('Frequency (Time)', per_cent)
     # Export file name as Targets_Frequency_<target_id>
