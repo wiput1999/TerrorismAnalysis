@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terrorism Analysis</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    <!-- Fullpage.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" integrity="sha256-MWBJX/7o3UIX5sMN/izdthod08WoIcWN0HOP7/X8+48="
+        crossorigin="anonymous" />
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section text-center" id="heading">
+            <h1>Terrorism Analysis</h1>
+            <br>
+            <p>This project is part of Problem Solving in Information Technology, KMITL</p>
+        </div>
+        <div class="section text-center" id="dataset">
+            <h1>Dataset</h1>
+            <h2>Global Terrorism Database from
+                <a href="https://www.kaggle.com/START-UMD/gtd">Kaggle</a>
+            </h2>
+            <h3>Over 170,000 records & 100 parameters</h3>
+        </div>
+        <div class="section text-center" id="chart-title">
+            <h1>Topic #1</h1>
+            <br>
+            <h2>เหตุการก่อการร้ายในทวีปเอเซียตะวันออกเฉียงใต้</h2>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">จำนวนเหตุการณ์ก่อการร้ายในทวีปเอเซียตะวันออกเฉียงใต้</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Regions_Frequency_Southeast Asia.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        กลุ่มติดอาวุธในภูมิภาคเอเชียตะวันออกเฉียงใต้ที่เป็นกลุ่มหัวสุดโต่งทางศาสนา มักก่อเหตุเพื่อต่อต้านอำนาจรัฐมาตั้งแต่สมัยสงครามเย็น
+                        มีหลายร้อยกลุ่มกระจัดกระจายอยู่ โดยเฉพาะในมาเลเซียอินโดนีเซียและฟิลิปปินส์ แต่ช่วงที่มีการก่อการร้ายบ่อยจะอยู่ในช่วงปี
+                        1990 และช่วงต้นปี 2000
+                    </p>
+                    <p class="lead">
+                        ต่อมาในปี 2004 การก่อการร้ายก็ได้เริ่มแพร่การจายอีกครั้งนึก อย่างเช่นต้นปี 2004 ก็ได้มีการก่อความไม่สงบในฟิลิปปินส์ได้มีการวางระเบิดบนเรือเดินสมุทร
+                        อีกทั้งในปี 2007 ยังมีการลอบวางระเบิดในรัฐสภากลางกรุงมะนิลาอีกด้วย
+                    </p>
+                    <p class="lead">
+                        ในปี 2013 เป็นปีที่กราฟพุ่งขึ้นสูงสุดนั้นหมายความว่ามีหลายๆเหตุการณ์ได้เกิดขึ้นในทวีปเอเชียตะวันออกเฉียงใต้นี้ ยกตัวอย่างเช่น
+                        การลุกขึ้นก่อจราจลของแรงงานต่างชาติในสิงคโปร์เหตุมาจากปัญหาคุณภาพสภาพชีวิตของแรงงาน
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section text-center" id="chart-title">
+            <h1>Topic #2</h1>
+            <br>
+            <h2>ความสัมพันธ์ของเป้าหมายและความสำเร็จในการก่อการร้าย</h2>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ภาพรวมจำนวนการก่อการร้ายในแต่ละเป้าหมาย</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
+                    <image src="assets/graph/Targets_Frequency_Overall.svg" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">จำนวนเหตุการณ์ก่อการร้ายที่มีเป้าหมายเป็นประชาชนและทรัพย์สิน</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Targets_Frequency_Private_Citizen_Property.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        ในเป้าหมายเกี่ยวกับประชาชนและทรัพย์สินมักจะพบได้บ่อย เนื่องจากการหวังผลประโยชน์บางอย่าง จึงทำให้เกิดเหตุก่อการร้ายและมักจะทำในรูปแบบของการวางระเบิด
+                        (Bombing) หรือการใช้อาวุธ (Armed Assault) ตามประเภทของการก่อการร้าย (Attack Information)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">จำนวนเหตุการณ์ก่อการร้ายที่มีเป้าหมายที่เกี่ยวข้องกับการทำแท้ง</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Targets_Frequency_Abortion Related.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        ส่วนเป้าหมายที่เกี่ยวข้องกับการทำแท้ง มักจะพบได้น้อย เนื่องจากว่าถ้าเปิดคลินิกทำแท้ง มักจะทำให้ได้รับในสิ่งที่คนใช้บริการต้องการ
+                        คือ การทำแท้ง แต่ก็มีบ้างที่เกิดความขัดแย้งภายในคลินิก นั่นคือ ให้บริการที่ไม่ตรงความต้องการของลูกค้า
+                        แต่มักไม่ค่อยเห็นเป็นเหตุการณ์บ่อยๆ
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">อัตราความสำเร็จของการก่อการร้ายที่มีเป้าหมายเป็นประชาชนและทรัพย์สิน</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Targets_Success_Private_Citizen_Property.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        ในอนาคต การก่อการร้ายหรือการก่ออาชญากรรมยังคงมีขึ้นเรื่อยๆ เนื่องจากความต้องการของมนุษย์ยังมีอยู่ไม่จำกัด และความต้องการในทางที่ไม่สุจริต
+                        ดังนั้นการเกิดการก่อการร้ายในเป้าหมายต่างๆ ยังคงเพิ่มขึ้นจากเดิม โดยการก่อร้ายที่สามารถทำได้โดยง่าย
+                        อย่างเช่น การก่อร้ายในเป้าหมายเกี่ยวกับประชาชนและทรัพย์สิน ซึ่งสามารถพบเห็นได้บ่อยครั้งในหลายๆ ปี
+                        ก็คาดว่ายังมีแนวโน้มความถี่ที่จะเกิดสูงขึ้น แต่ในทางกลับกันการก่อร้ายในเป้าหมายเกี่ยวข้องกับการทำแท้งมีความถี่ที่น้อยก็อาจเป็นเพราะ
+                        มีกฏหมายมากำหนดในเรื่องของคลินิกการทำแท้ง หรือเป็นสิ่งที่สังคมส่วนใหญ่ไม่เป็นที่ยอมรับ ทำให้คลินิกการทำแท้งลดลงในภาพรวม
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">อัตราความสำเร็จของการก่อการร้ายที่มีเป้าหมายเกี่ยวกับการทำแท้ง</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Targets_Success_Abortion Related.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        ในส่วนของโอกาสที่จะเกิดความสำเร็จก็ขึ้นอยู่กับปัจจัยต่างๆ ในช่วงที่จะเกิดเหตุการณ์นั้น อย่างเช่น การเมือง ตำรวจ ทหารหรือผู้มีอำนาจในการควบคุมการก่อร้าย
+                        ไม่ให้เกิดขึ้น ซึ่งอาจไม่แน่นอนหรือมีทั้งโอกาสที่เป็นไปได้และเป็นไปไม่ได้ที่จะก่อการสำเร็จ แต่หากดูแนวโน้มของกราฟความสำเร็จก็จะเห็นถึงความแปรผันไปในทางเดียวกันกับจำนวนความถี่ที่เกิดขึ้น
+                        ดังนั้นสามารถดูโอกาสที่จะเกิดขึ้นของเป้าหมายต่างๆ ในเป้าหมายหลักจากกราฟที่ 1 (เป้าหมายที่เกิดขึ้นมากที่สุด)
+                        เพื่อมาดูจำนวนความถี่และอัตราความสำเร็จที่เกิดขึ้นในแต่ละปี
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section text-center" id="chart-title">
+            <h1>Topic #3</h1>
+            <br>
+            <h2>ความสัมพันธ์ของจำนวนการใช้และความสำเร็จของอาวุธแต่ละชนิด</h2>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ความสำเร็จโดยภาพรวมของการใช้อาวุธชนิดต่างๆ</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Weapons_SuccessRate_Overall.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        Radiological (7.692%) การใช้อาวุธประเภทนี้มีเปอร์เซนต์การใช้ก่อเหตุน้อยที่สุดจากทุกประเภท เนื่องจากเป็นอาวุธที่มีอำนาจการทำลายต่ำ
+                        อานุภาพการทำลายล้างไม่รุนแรง แต่จะสร้างความตื่นตระหนก ให้กับประชาชนในพื้นที่บริเวณนั้นมากกว่าเพราะหากเกิดระเบิดขึ้นจะมีการปล่อยสารกัมมันตรังสีที่เป็นส่วนผสมภายใน
+                        ไปปนเปื้อนในบริเวณต่าง ๆ แต่ไม่ทำให้ผู้คนต้องเสียชีวิต โดยกว่าจะชำระล้างไม่ใช่เรื่องง่าย กว่าผู้คนจะหายตื่นกลัว
+                        และกลับมาประกอบอาชีพกันใหม่ อาจต้องใช้เวลานาน แต่อย่างไรก็ตาม สำหรับผู้ก่อการร้ายแล้ว อาวุธประเภทนี้
+                        เป็นอาวุธที่มีคุณค่าในการสร้างความหวั่นวิตก ให้กับประชาชนในวงกว้างได้
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ความสำเร็จโดยภาพรวมของการใช้อาวุธชนิดต่างๆ</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Weapons_SuccessRate_Overall.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        Firearms(92.868%) การใช้อาวุธประเภทนี้มีเปอร์เซนต์การใช้ก่อเหตุสูงเป็นอันดับ 3 เนื่องจากอาวุธปืนเป็นอาวุธที่มีราคาไม่แพงมากนัก
+                        มีอานุภาพสูง สามารถใช้งานและเก็บรักษาได้ง่าย ทนทาน ใช้งานได้หลายปี สามารถผลิตได้ค่อนข้างง่าย ขนย้ายและซ่อนได้ง่าย
+                        รวมถึงในบางประเทศมีการใช้กฎหมายให้ผู้คนมีสิทธิครอบครองปืนได้ด้วย
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ความสำเร็จโดยภาพรวมของการใช้อาวุธชนิดต่างๆ</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Weapons_SuccessRate_Overall.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        Incendiary (94.024%) การใช้อาวุธประเภทนี้มีเปอร์เซนต์การใช้ก่อเหตุสูงเป็นอันดับ2 โดยอาวุธประเภทวางเพลิงมีอัตราการใช้ที่สูงขึ้น
+                        ทั้งนี้อาจเป็นเพราะว่า สามารถก่อความเสียหายได้เป็นวงกว้างและมีอานุภาพการทำลายล้างสูง กฏหมายควบคุมไม่เข้มงวดนักเมื่อเทียบกับอาวุธนิวเคลียร์
+                        อาวุธประเภทวางเพลิงที่รู้จักกันได้โดยทั่วไปได้แก่ ฟอสฟอรัสขาว นาปาล์ม เทอร์ไมน์ เป็นต้น
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ความสำเร็จโดยภาพรวมของการใช้อาวุธชนิดต่างๆ</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Weapons_SuccessRate_Overall.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        Other (94.615%) การใช้อาวุธประเภทนี้มีเปอร์เซนต์การใช้ก่อเหตุสูงเป็นอันดับ 1 โดยจะยกตัวอย่างต่อไปนี้คืออาวุธประเภทของมีคม
+                        ก้อนหิน ไม้หรืออาวุธที่ใช้ทุบ ตี ทำร้ายร่างกาย ซึ่งมีแนวโน้มว่าจะมีอัตราการก่อเหตุที่สูงขึ้นกว่าอาวุธอื่นๆ
+                        อาจเป็นเพราะว่า หาซื้อได้ง่าย ไม่จำเป็นต้องใช้ทักษะในการก่อเหตุมากนัก มีรูปแบบและวิธีการที่ค่อนข้างหลากหลาย
+                        และเป็นอาวุธประเภทคาดเดาได้ยาก เราไม่รู้ว่าเมื่อไหร่จะมีคนวิ่งมาแทง หรือ เอาก้อนหินมาทุบหัว จึงทำให้อาวุธประเภทนี้ได้รับความนิยมในภายหลังและมีแนวโน้มว่าจะเพิ่มขึ้นเรื่อยๆ
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section chart-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="content-title">ความสำเร็จจากการใช้อาวุธชนิดระเบิด</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-lg-7 col-xl-7 chart-svg">
+                    <image src="assets/graph/Weapons_SuccessRate_Explosives.svg" class="img-fluid" />
+                </div>
+                <div class="col-lg-5 col-xl-5">
+                    <p class="lead">
+                        จากชนิดอาวุธทั้งหมดนั้น Explosives Weapon หรือ อาวุธจำพวกระเบิดนั้น เป็นอาวุธที่มีความสำเร็จมากที่สุด ในการก่อการร้าย เพราะ
+                        ระเบิดนั้นสามารถสร้างความเสียหายได้ในวงกว้าง และด้วยเสียงและฝุ่นควันจะทำให้เกิดความวุ่นวายและถูกสื่อจับตามองได้ง่ายที่สุด
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section section-tools">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="section-heading text-uppercase">Tools</h1>
+                        <h3 class="section-subheading text-muted">Things we used to get this project done. Nicely.</h3>
+                    </div>
+                </div>
+                <div class="row text-center" style="margin-top: 1em;">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="https://github.com" target="_blank">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">GitHub</h4>
+                        <p class="text-muted">Make project collaboration better</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="https://cloud.google.com/kubernetes-engine/" target="_blank">
+                                <i class="fa fa-cloud fa-stack-2x text-primary"></i>
+                                <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">Google Kubernetes Engine</h4>
+                        <p class="text-muted">For this website and make it scalable.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="https://www.python.org" target="_blank">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">Python</h4>
+                        <p class="text-muted">The programming language used in this project.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="http://www.numpy.org" target="_blank">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-superscript fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">Numpy</h4>
+                        <p class="text-muted">Make math things easier in Python.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="https://pandas.pydata.org" target="_blank">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-table fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">Pandas</h4>
+                        <p class="text-muted">Data analysis library for Python.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x hvr-bob">
+                            <a href="http://pygal.org/en/stable" target="_blank">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </span>
+                        <h4 class="service-heading">Pygal</h4>
+                        <p class="text-muted">Awesome chart library for Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-tools">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Our Team</h2>
+                        <h3 class="section-subheading text-muted">Made this awesome project.</h3>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="img-fluid rounded-circle hvr-rotate" src="assets/team/01.jpg" alt="">
+                            <h4>Wiput Pootong</h4>
+                            <p class="text-muted">Joey</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/wiput.pootong" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/wiput1999" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle hvr-rotate" src="assets/team/02.jpg" alt="">
+                            <h4>Jettawat Attakarnphong</h4>
+                            <p class="text-muted">Job</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/ZmaaXD" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/seenosea" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle hvr-rotate" src="assets/team/03.jpg" alt="">
+                            <h4>Attawut Arpornrat</h4>
+                            <p class="text-muted">James</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/kawisara.srn" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/profile.php?id=100000564350073" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle hvr-rotate" src="assets/team/04.png" alt="">
+                            <h4>Panupong Ketrattanakul</h4>
+                            <p class="text-muted">Pao</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/paoyimpae" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/paoyimpae" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle hvr-rotate" src="assets/team/05.jpg" alt="">
+                            <h4>Pannita Hamego</h4>
+                            <p class="text-muted">Gam</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/profile.php?id=100019312865281" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/Pannita2212" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle hvr-rotate" src="assets/team/06.jpg" alt="">
+                            <h4>Tharinee Kaeoprayoon</h4>
+                            <p class="text-muted">Pakbung</p>
+                            <ul class="list-inline social-buttons">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/shiroi.youkai" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/tharinee" target="_blank" class="hvr-grow">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js" integrity="sha256-SwWHEBZICAfuD82HWp9i1VmxX0dXjllMm6cNKvucHAY="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+
+                navigation: true,
+                slidesNavigation: true,
+                lockAnchors: true,
+
+                controlArrows: true,
+
+                lazyLoading: true,
+
+                paddingTop: '2em',
+                paddingBottom: '0.5em',
+
+            });
+        });
+    </script>
+</body>
+
+</html>
